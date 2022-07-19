@@ -1,0 +1,15 @@
+@use '../1-base/variables'
+
+@mixin center-content
+  max-width: variables.$container-width
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@mixin header-icon
+  position: relative
+  display: flex
+  flex-direction: column
+  text-align: center
+  margin-left: 2.5rem
