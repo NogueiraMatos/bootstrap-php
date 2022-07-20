@@ -2,5 +2,18 @@
 @use '../1-base/base-mixins'
 @use 'layouts-mixins'
 
+#carouselHighlight
+    width: 40rem
+
+.cardapio
+    background-color: variables.$secondary-bg-color
+    &-list
+        border-color: variables.$primary-color
+        border-top-style: solid
+        border-bottom-style: solid
+
 .fa-mug-saucer, .fa-plate-wheat, .fa-glass-water
     color: variables.$primary-color
+
+.carousel-p
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))

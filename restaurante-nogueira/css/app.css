@@ -27,16 +27,22 @@ ul {
   list-style: none;
 }
 
-header {
-  background-color: #516451;
-}
-
 nav {
   background-color: #FFF;
 }
 
 i {
   color: #FFF;
+}
+
+.header-top {
+  background-color: #516451;
+}
+.header-top-ifood {
+  color: #FFF;
+}
+.header-top-logo {
+  height: 1.5rem;
 }
 
 .header-bottom {
@@ -46,19 +52,19 @@ i {
   height: 3rem;
 }
 
-.header-top-ifood {
-  color: #FFF;
-}
-
-.header-top-logo {
-  height: 1.5rem;
-}
-
 .main-image {
   height: 32rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("../header2.png");
   background-position: 50%;
   background-size: cover;
+}
+
+footer {
+  background-color: #516451;
+}
+
+.footer_topics {
+  color: #FFF;
 }
 
 .about {
@@ -73,8 +79,29 @@ i {
   background-size: cover;
 }
 
+#carouselHighlight {
+  width: 40rem;
+}
+
+.cardapio {
+  background-color: #E8EAEB;
+}
+.cardapio-list {
+  border-color: #516451;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
 .fa-mug-saucer, .fa-plate-wheat, .fa-glass-water {
   color: #516451;
+}
+
+.carousel-p {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.formInputMsg {
+  height: 8rem;
 }
 
 .btn {

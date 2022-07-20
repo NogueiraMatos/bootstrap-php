@@ -2,25 +2,23 @@
 @use '../1-base/base-mixins'
 @use 'layouts-mixins'
 
-header
-  background-color: variables.$primary-color
-
 nav
   background-color: variables.$light-color
 
 i
   color: variables.$light-color
 
+.header-top
+  background-color: variables.$primary-color
+  &-ifood
+    color: variables.$light-color
+  &-logo
+    height: 1.5rem
+  
 .header-bottom
   background-color: variables.$light-color
   &-img
     height: 3rem
-
-.header-top-ifood
-  color: variables.$light-color
-
-.header-top-logo
-  height: 1.5rem
 
 .main-image
   height: 32rem
