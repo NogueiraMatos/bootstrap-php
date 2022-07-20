@@ -1,0 +1,98 @@
+html {
+  font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+a:hover {
+  color: #886D4E;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: #516451;
+}
+
+nav {
+  background-color: #FFF;
+}
+
+i {
+  color: #FFF;
+}
+
+.header-bottom {
+  background-color: #FFF;
+}
+.header-bottom-img {
+  height: 3rem;
+}
+
+.header-top-ifood {
+  color: #FFF;
+}
+
+.header-top-logo {
+  height: 1.5rem;
+}
+
+.main-image {
+  height: 32rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("../header2.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.about {
+  height: 25rem;
+  width: 30rem;
+}
+.about-img {
+  background-image: url("../frango-salada.jpg");
+  height: 25rem;
+  width: 45rem;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.fa-mug-saucer, .fa-plate-wheat, .fa-glass-water {
+  color: #516451;
+}
+
+.btn {
+  padding: 8px 15px;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #516451;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #516451;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #FFF;
+  color: #516451;
+}
+
+/*# sourceMappingURL=app.css.map */
