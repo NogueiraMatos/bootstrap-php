@@ -67,6 +67,10 @@ footer {
   color: #FFF;
 }
 
+.footer_contact {
+  width: 20rem;
+}
+
 .about {
   height: 25rem;
   width: 30rem;
