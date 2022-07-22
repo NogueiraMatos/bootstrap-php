@@ -96,6 +96,35 @@ footer {
   background-size: cover;
 }
 
+.ghost-element {
+  width: 100%;
+  height: 8rem;
+}
+
+.cardapio-bg {
+  background-color: #E8EAEB;
+}
+
+.cardapio_img {
+  background-position: 50%;
+  background-size: cover;
+  width: 28rem;
+  height: 20rem;
+}
+.cardapio_img-height {
+  height: 40rem;
+  width: 56rem;
+  background-size: 56rem 40rem;
+}
+
+.cardapio-width {
+  width: 56rem;
+}
+
+.formInputMsg {
+  height: 8rem;
+}
+
 #carouselHighlight {
   width: 40rem;
 }
@@ -115,25 +144,6 @@ footer {
 
 .carousel-p {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-}
-
-.formInputMsg {
-  height: 8rem;
-}
-
-.ghost-element {
-  width: 100%;
-  height: 5rem;
-}
-
-.cardapio-bg {
-  background-color: #E8EAEB;
-}
-
-.cardapio_img {
-  background-image: url("../expresso.png");
-  background-position: 50%;
-  background-size: cover;
 }
 
 /*# sourceMappingURL=app.css.map */
