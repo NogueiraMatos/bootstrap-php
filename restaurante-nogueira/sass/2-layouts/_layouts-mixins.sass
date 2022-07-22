@@ -6,3 +6,10 @@
   display: flex
   justify-content: space-between
   align-items: center
+
+@mixin link-decoration
+  color: variables.$primary-color
+  text-decoration: none
+  transition: .4s
+  &:hover
+    color: variables.$link-hover-color

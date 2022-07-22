@@ -31,6 +31,10 @@ nav {
   background-color: #FFF;
 }
 
+header {
+  z-index: 1;
+}
+
 i {
   color: #FFF;
 }
@@ -57,6 +61,15 @@ i {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("../header2.png");
   background-position: 50%;
   background-size: cover;
+}
+
+.links {
+  color: #516451;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.links:hover {
+  color: #886D4E;
 }
 
 footer {
@@ -108,22 +121,19 @@ footer {
   height: 8rem;
 }
 
-.btn {
-  padding: 8px 15px;
-  height: 40px;
-  color: #ffffff;
-  border-radius: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #516451;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #516451;
-  transition: 0.4s;
+.ghost-element {
+  width: 100%;
+  height: 5rem;
 }
-.btn:hover {
-  background-color: #FFF;
-  color: #516451;
+
+.cardapio-bg {
+  background-color: #E8EAEB;
+}
+
+.cardapio_img {
+  background-image: url("../expresso.png");
+  background-position: 50%;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,51 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <title>Restaurante Nogueira</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurante de comida saudável">
-    <meta name="keywords" content="restaurante, comida saudável, vegetariano, vegano, fitness, low carb, alimentação">
-    <link rel="icon" type="image/x-icon" href="favicon.jpg">
-    <link rel="stylesheet" href="css/app.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <header class="position-fixed w-100">
-        <div class="header-top">
-            <div class="container d-flex column justify-content-between align-items-center">
-                <div class="header-top-ifood">
-                    <span>Faça já o seu pedido </span><img src="ifood.png" alt="ifood" class="header-top-logo mx-1">
-                </div>
-                <div class="header-top-socials my-1 d-flex align-items-center">
-                    <i class="fa-brands fa-facebook mx-3 fs-4"></i>
-                    <i class="fa-brands fa-instagram fs-4"></i>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom py-4">
-            <nav class="container">
-                <ul class="header-bottom-links mb-0 d-flex justify-content-between align-items-center">
-                    <li><strong>Sobre</strong></li>
-                    <li><strong>Cardápio</strong></li>
-                    <li><img src="/logotipo-header.png" alt="logotipo" class="header-bottom-img"></li>
-                    <li><strong>Reserva</strong></li>
-                    <li><strong>Contato</strong></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
+<?php include 'header.php'; ?>
+    <main id='top'>
         <div class="main-image d-flex justify-content-center align-items-center mb-5">
-            <img src="/logotipo-header-transparente.png" alt="logotipo" class="main-img">
+            <img src="logotipo-header-transparente.png" alt="logotipo" class="main-img">
         </div>
     </main>
     <section class="container">
@@ -137,7 +93,7 @@
     </section>
     <section class="w-100 py-5">
         <div class="container">
-            <h2 class="text-center mb-5">RESERVA</h2>
+            <h2 id="reserva" class="text-center mb-5">RESERVA</h2>
             <form>
                 <div class="row">
                     <div class="mb-3 col-8">
@@ -188,58 +144,8 @@
             </form>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="py-4 mb-5 d-flex row">
-                    <h5 class="footer_topics pb-1">Siga-nos</h5>
-                    <i class="fa-brands fa-facebook fs-2 col"></i>
-                    <i class="fa-brands fa-instagram fs-2 col"></i>
-                </div>
-                <div class="py-4 footer_topics footer_contact">
-                    <h5>Contato</h5>
-                    <p>Esplanada dos Ministérios lote 12 - Brasília, DF, 70050-000</p>
-                    <p>(61) 3333-2222</p>
-                    <p>contato@restaurantenogueira.com.br</p>
-                </div>
-                <div class="py-4 footer_topics">
-                    <h5>Horários</h5>
-                    <p>Seg-Sex: 11h30 - 24h00</p>
-                    <p>Sábado 11h30 - 14h</p>
-                    <p>Domingo 11h30 - 14h</p>
-                </div>
-                <div class="py-4">
-                    <h5 class="footer_topics">Como chegar</h5>
-                    <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6456.517133600096!2d-47.87604230568438!3d-15.800365075410953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55fbb231e9698d19!2sCatedral%20Metropolitana%20Nossa%20Senhora%20Aparecida!5e0!3m2!1spt-PT!2sbr!4v1658411979721!5m2!1spt-PT!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div>
-                <p class="text-center pb-1 footer_topics">ano © Todos os direitos reservados</p>
-            </div>
-        </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/797e057ed0.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
-    <script>
-        $(document).ready(function () {
-            var $tel = $("#inputTel");
-            $tel.mask('00 - 00000-0000', { reverse: true });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-</body>
 
-</html>
-
+<?php include 'footer.php'; ?>
 <!-- HTML semântico
 <article>
 <aside>
