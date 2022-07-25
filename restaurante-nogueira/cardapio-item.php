@@ -3,6 +3,13 @@
 <section class="container d-flex justify-content-center">
     <div class="cardapio-width d-flex flex-column">
         <?php
+        function foodCharact($charact)
+        {
+            if ($charact != true) {
+                echo 'style="display: none"';
+            }
+        }
+
         $server = 'localhost';
         $user = 'root';
         $password = 'root';
@@ -11,12 +18,6 @@
 
         $db_connect = new mysqli($server, $user, $password, $db_name, $port);
         mysqli_set_charset($db_connect, "utf8");
-
-function foodCharact($charact) {
-    if ($charact) {
-        echo 'style="display: none"'
-    }
-}
 
         if ($db_connect->connect_error) {
             echo 'Falha: ' . $db_connect->connect_error;
@@ -32,9 +33,9 @@ function foodCharact($charact) {
                     <div class="cardapio_img cardapio_img-height" style="background-image: url('<?php echo $row['codigo']; ?>.png')"></div>
                     <div class="container">
                         <ul class="row py-2">
-                            <li class="col"><i class="fa-solid fa-wheat-awn-circle-exclamation links p-2 item-padding"></i><span class="fs-5">glúten free</span></li>
-                            <li class="col"><i class="fa-solid fa-egg links p-2 item-padding"></i><span class="fs-5">ovolactovegetariano</span></li>
-                            <li class="col"><i class="fa-solid fa-leaf links p-2 item-padding"></i><span class="fs-5">vegano</span></li>
+                            <li class="col" <?php foodCharact($row['gluten_free']) ?>><i class="fa-solid fa-wheat-awn-circle-exclamation links p-2 item-padding"></i><span class="fs-5">glúten free</span></li>
+                            <li class="col" <?php foodCharact($row['ovolacto']) ?>><i class="fa-solid fa-egg links p-2 item-padding"></i><span class="fs-5">ovolactovegetariano</span></li>
+                            <li class="col" <?php foodCharact($row['vegano']) ?>><i class="fa-solid fa-leaf links p-2 item-padding"></i><span class="fs-5">vegano</span></li>
                         </ul>
                         <p class="pb-5 fs-4"><?php echo $row['descricao']; ?></p>
                     </div>

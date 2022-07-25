@@ -72,6 +72,12 @@ i {
   color: #886D4E;
 }
 
+@media (max-width: 576px) {
+  .sm-media-hidden {
+    display: none;
+  }
+}
+
 footer {
   background-color: #516451;
 }

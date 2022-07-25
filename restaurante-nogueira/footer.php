@@ -1,18 +1,18 @@
 <footer>
     <div class="container">
         <div class="d-flex justify-content-between">
-            <div class="py-4 mb-5 d-flex row">
+            <div class="p-2 mb-5 d-flex row">
                 <h5 class="footer_topics pb-1">Siga-nos</h5>
                 <a href="https://github.com/NogueiraMatos" class="col"><i class="fa-brands fa-facebook fs-2 col"></i></a>
                 <a href="https://github.com/NogueiraMatos" class="col"><i class="fa-brands fa-instagram fs-2 col"></i></a>
             </div>
-            <div class="py-4 footer_topics footer_contact">
+            <div class="p-2 footer_topics footer_contact">
                 <h5 id="contato">Contato</h5>
                 <p>Esplanada dos Ministérios lote 12 - Brasília, DF, 70050-000</p>
                 <p>(61) 3333-2222</p>
                 <p>contato@restaurantenogueira.com.br</p>
             </div>
-            <div class="py-4 footer_topics">
+            <div class="p-2 footer_topics">
                 <h5>Horários</h5>
                 <?php
                 $weekday = date('w');
@@ -36,7 +36,7 @@
                 <p>Ter-Sab: 11h30 - 22h00</p>
                 <p>Domingo 11h30 - 14h</p>
             </div>
-            <div class="py-4">
+            <div class="p-2 sm-media-hidden">
                 <h5 class="footer_topics">Como chegar</h5>
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6456.517133600096!2d-47.87604230568438!3d-15.800365075410953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55fbb231e9698d19!2sCatedral%20Metropolitana%20Nossa%20Senhora%20Aparecida!5e0!3m2!1spt-PT!2sbr!4v1658411979721!5m2!1spt-PT!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

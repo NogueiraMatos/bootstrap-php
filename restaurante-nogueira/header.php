@@ -36,7 +36,7 @@
                 <ul class="header-bottom-links mb-0 d-flex justify-content-between align-items-center">
                     <li><strong><a href="index.php#top" class="links">Sobre</a></strong></li>
                     <li><strong><a href="cardapio.php" class="links">Cardápio</a></strong></li>
-                    <li><a href="index.php"><img src="logotipo-header.png" alt="logotipo" class="header-bottom-img"></a></li>
+                    <li class="sm-media-hidden"><a href="index.php"><img src="logotipo-header.png" alt="logotipo" class="header-bottom-img"></a></li>
                     <li><strong><a href="index.php#reserva" class="links">Reserva</a></strong></li>
                     <li><strong><a href="#contato" class="links">Contato</a></strong></li>
                 </ul>

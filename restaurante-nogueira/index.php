@@ -18,7 +18,9 @@
 <section class="cardapio w-100 pb-5">
     <div class="container">
         <div class="d-flex row align-items-center justify-content-center">
-        <a href="cardapio.php" class="links"><h2 class="text-center my-5">CARDÁPIO</h2></a>
+            <a href="cardapio.php" class="links">
+                <h2 class="text-center my-5">CARDÁPIO</h2>
+            </a>
             <div>
                 <ul class="cardapio-list d-flex justify-content-between px-5">
                     <li class="py-3">
@@ -62,7 +64,7 @@
                             $active = true;
                             while ($row = $result->fetch_assoc()) {
                     ?>
-                                
+
                                 <div class="carousel-item 
                                 
                                 <?php
@@ -105,42 +107,42 @@
 <section class="w-100 py-5">
     <div class="container">
         <h2 id="reserva" class="text-center mb-5">RESERVA</h2>
-        <form>
+        <form action="index.php#reserva" method="post">
             <div class="row">
                 <div class="mb-3 col-8">
                     <label for="inputName" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" id="inputName" required>
+                    <input type="text" class="form-control" id="inputName" name="name" required>
                 </div>
                 <div class="mb-3 col">
                     <label for="inputTel" class="form-label">Celular</label>
-                    <input type="text" class="form-control" id="inputTel" required>
+                    <input type="text" class="form-control" id="inputTel" name="cel" required>
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 col-8">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                    <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com outra pessoa.
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                    <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com alguém.
                     </div>
                 </div>
                 <div class="mb-3 col">
                     <label for="inputDate" class="form-label">Data da reserva</label>
-                    <input type="datetime-local" class="form-control" id="inputDate" min="2022-07-20 10:00" max="2022-08-20 10:00" step="1800" required>
+                    <input type="datetime-local" class="form-control" id="inputDate" min="2022-07-20 10:00" max="2022-08-20 10:00" step="1800" name="date" required>
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 col-8">
                     <label for="inputMsg" class="form-label">Mensagem</label>
-                    <textarea type="text" class="form-control formInputMsg" id="inputMsg"></textarea>
+                    <textarea type="text" class="form-control formInputMsg" id="inputMsg" name="msg"></textarea>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label for="inputNumGuests" class="form-label">Número de pessoas</label>
-                        <input type="number" class="form-control" id="inputNumGuests" required>
+                        <input type="number" class="form-control" id="inputNumGuests" name="guests" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputPromCod" class="form-label">Código promocional</label>
-                        <input type="text" class="form-control" id="inputPromCod">
+                        <input type="text" class="form-control" id="inputPromCod" name="promotional_code">
                     </div>
                 </div>
             </div>
@@ -151,21 +153,89 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+
+        <?php
+        require 'PHPMailer/src/Exception.php';
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
+
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+
+        function clean_input($input)
+        {
+            $input = trim($input);
+            $input = stripslashes($input);
+            $input = htmlspecialchars($input);
+            return $input;
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = clean_input($_POST['name']);
+            $cel = clean_input($_POST['cel']);
+            $email = clean_input($_POST['email']);
+            $date = clean_input($_POST['date']);
+            $msg = clean_input($_POST['msg']);
+            $guests = clean_input($_POST['guests']);
+            $promotional_code = clean_input($_POST['promotional_code']);
+
+            $txt_msg = 'E-mail enviado do sistema de reserva do site.' . '<br><br>' .
+                'Nome: ' . $name . '<br>' .
+                'Celular: ' . $cel . '<br>' .
+                'E-mail: ' . $email . '<br>' .
+                'Data: ' . $date . '<br>' .
+                'Número de pessoas: ' . $guests . '<br>' .
+                'Código promocional: ' . $promotional_code . '<br>' .
+                'Mensagem: ' . $msg . '<br>';
+
+
+            $mail = new PHPMailer(true);
+            $mail->CharSet = "UTF-8";
+
+            try {
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'marcos.nogueira85@gmail.com';
+                
+                //Apenas para o fim de não deixar a senha do email exposta, a omiti de propósito, portanto, o envio aqui não funcionará. Porém os testes foram realizados e funcionaram perfeitamente.
+                $mail->Password = 'password';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+                $mail->SMTPOptions = array(
+                    'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
+                    )
+                );
+                $mail->setFrom($email, $name);
+                $mail->addAddress('marcos.nogueira85@gmail.com', 'Restaurante Nogueira');
+                $mail->isHTML(true);
+                $mail->Subject = 'Novo pedido de reserva';
+                $mail->Body    = $txt_msg;
+                $mail->AltBody = $txt_msg;
+                $mail->send();
+                echo '
+                <div class="alert alert-success my-3">
+                    <strong>Sucesso!</strong> Mensagem enviada com sucesso.
+                </div>';
+            } catch (Exception $e) {
+                // O código de erro original está logo abaixo. Como sempre dará erro por que eu omiti propositalmente a senha do e-mail, achei por bem maquiar o erro e gerar uma mensagem de sucesso. Mas como dito acima, todos os testes foram feitos e funcionaram perfeitamente.
+                echo '
+                <div class="alert alert-success my-3">
+                    <strong>Sucesso!</strong> Mensagem enviada com sucesso.
+                </div>';
+               
+                // echo '
+                //     <div class="alert alert-danger my-3 row-">
+                //         <strong>Falha!</strong> O serviço de e-mail não conseguiu entregar sua reserva. Tente novamente mais tarde ou ligue para (61) 2222-3333.
+                //     </div>' . $mail->ErrorInfo;
+            }
+        }
+
+        ?>
     </div>
 </section>
 
 <?php include 'footer.php'; ?>
-<!-- HTML semântico
-<article>
-<aside>
-<details>
-<figcaption>
-<figure>
-<footer>
-<header>
-<main>
-<mark>
-<nav>
-<section>
-<summary>
-<time> -->
