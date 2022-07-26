@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header class="position-fixed w-100">
+    <header class="sm-media-static w-100">
         <div class="header-top">
             <div class="container d-flex column justify-content-between align-items-center">
                 <div class="header-top-ifood">

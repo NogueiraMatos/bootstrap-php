@@ -28,6 +28,10 @@ i
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("../header2.png")
   background-position: 50%
   background-size: cover
+  width: 100%
+  &-logo
+    @include base-mixins.mobile
+      width: 100%  
 
 .links
   @include layouts-mixins.link-decoration
@@ -35,3 +39,8 @@ i
 .sm-media-hidden
   @include base-mixins.mobile
     display: none
+
+.sm-media-static
+  position: fixed
+  @include base-mixins.mobile
+    position: static

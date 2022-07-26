@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <div class="ghost-element"> </div>
 <section class="container d-flex justify-content-center">
-    <div class="cardapio-width d-flex flex-column">
+    <div class="cardapio-width d-flex flex-column align-items-center">
         <?php
         function foodCharact($charact)
         {

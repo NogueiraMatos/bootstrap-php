@@ -1,16 +1,16 @@
 <footer>
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="p-2 mb-5 d-flex row">
+    <div class="container px-0 w-100">
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="p-2 mb-5 d-flex row text-center">
                 <h5 class="footer_topics pb-1">Siga-nos</h5>
                 <a href="https://github.com/NogueiraMatos" class="col"><i class="fa-brands fa-facebook fs-2 col"></i></a>
                 <a href="https://github.com/NogueiraMatos" class="col"><i class="fa-brands fa-instagram fs-2 col"></i></a>
             </div>
-            <div class="p-2 footer_topics footer_contact">
+            <div class="p-2 footer_topics footer_contact text-center">
                 <h5 id="contato">Contato</h5>
                 <p>Esplanada dos Ministérios lote 12 - Brasília, DF, 70050-000</p>
                 <p>(61) 3333-2222</p>
-                <p>contato@restaurantenogueira.com.br</p>
+                <p class="text-wrap">contato@restaurantenogueira.com.br</p>
             </div>
             <div class="p-2 footer_topics">
                 <h5>Horários</h5>

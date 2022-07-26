@@ -18,9 +18,9 @@ function listItems($category)
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
 ?>
-                <div class="row p-5">
+                <div class="row pb-5">
                     <a href="cardapio-item.php?id=<?php echo $row['codigo']; ?>" class="col"><div class="cardapio_img" style="background-image: url('<?php echo $row['codigo']; ?>.png')"></div></a>
-                    <div class="col p-5">
+                    <div class="col p-3">
                         <h3 class="text-uppercase"><?php echo $row['nome']; ?></h3>
                         <p><?php echo $row['descricao']; ?></p>
                     </div>
@@ -46,19 +46,16 @@ function listItems($category)
             <div>
                 <ul class="cardapio-list d-flex justify-content-between px-5">
                     <li class="py-3">
-                        <h4><a href="#cafe" class="links"><i class="fa-solid fa-mug-saucer mx-3 fs-5"></i>Cafés
+                        <a href="#cafe" class="links"><i class="fa-solid fa-mug-saucer mx-3 fs-5"></i><span class="sm-media-hidden">Cafés</span>
                             </a>
-                        </h4>
                     </li>
                     <li class="py-3">
-                        <h4><a href="#sanduiche" class="links"><i class="fa-solid fa-plate-wheat mx-3 fs-5"></i>Sanduíches e Saladas
+                        <a href="#sanduiche" class="links"><i class="fa-solid fa-plate-wheat mx-3 fs-5"></i><span class="sm-media-hidden">Sanduíches e Saladas</span>
                             </a>
-                        </h4>
                     </li>
                     <li class="py-3">
-                        <h4><a href="#bebida" class="links"><i class="fa-solid fa-glass-water mx-3 fs-5"></i>Bebidas
+                        <a href="#bebida" class="links"><i class="fa-solid fa-glass-water mx-3 fs-5"></i><span class="sm-media-hidden">Bebidas</span>
                             </a>
-                        </h4>
                     </li>
                 </ul>
             </div>

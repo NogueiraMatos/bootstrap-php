@@ -1,8 +1,10 @@
 <?php include 'header.php'; ?>
 <main id='top'>
-    <div class="main-image d-flex justify-content-center align-items-center mb-5">
-        <img src="logotipo-header-transparente.png" alt="logotipo" class="main-img">
-    </div>
+    <section>
+        <div class="main-image d-flex justify-content-center align-items-center mb-5">
+            <img src="logotipo-header-transparente.png" alt="logotipo" class="main-image-logo">
+        </div>
+    </section>
 </main>
 <section class="container">
     <div class="d-flex flex-row justify-content-between">
@@ -197,7 +199,7 @@
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
                 $mail->Username = 'marcos.nogueira85@gmail.com';
-                
+
                 //Apenas para o fim de não deixar a senha do email exposta, a omiti de propósito, portanto, o envio aqui não funcionará. Porém os testes foram realizados e funcionaram perfeitamente.
                 $mail->Password = 'password';
                 $mail->SMTPSecure = 'tls';
@@ -226,7 +228,7 @@
                 <div class="alert alert-success my-3">
                     <strong>Sucesso!</strong> Mensagem enviada com sucesso.
                 </div>';
-               
+
                 // echo '
                 //     <div class="alert alert-danger my-3 row-">
                 //         <strong>Falha!</strong> O serviço de e-mail não conseguiu entregar sua reserva. Tente novamente mais tarde ou ligue para (61) 2222-3333.
