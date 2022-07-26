@@ -26,16 +26,16 @@
             <div>
                 <ul class="cardapio-list d-flex justify-content-between px-5">
                     <li class="py-3">
-                        <h4><a href="cardapio.php#cafe" class="links"><i class="fa-solid fa-mug-saucer mx-3 fs-5"></i>Cafés</a>
-                        </h4>
+                        <a href="cardapio.php#cafe" class="links"><i class="fa-solid fa-mug-saucer mx-3 fs-5"></i><span class="sm-media-hidden">Cafés</span>
+                            </a>
                     </li>
                     <li class="py-3">
-                        <h4><a href="cardapio.php#sanduiche" class="links"><i class="fa-solid fa-plate-wheat mx-3 fs-5"></i>Sanduíches e Saladas</a>
-                        </h4>
+                        <a href="cardapio.php#sanduiche" class="links"><i class="fa-solid fa-plate-wheat mx-3 fs-5"></i><span class="sm-media-hidden">Sanduíches e Saladas</span>
+                            </a>
                     </li>
                     <li class="py-3">
-                        <h4><a href="cardapio.php#bebida" class="links"><i class="fa-solid fa-glass-water mx-3 fs-5"></i>Bebidas</a>
-                        </h4>
+                        <a href="cardapio.php#bebida" class="links"><i class="fa-solid fa-glass-water mx-3 fs-5"></i><span class="sm-media-hidden">Bebidas</span>
+                            </a>
                     </li>
                 </ul>
             </div>
